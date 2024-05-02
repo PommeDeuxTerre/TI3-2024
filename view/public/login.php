@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="card mt-4 container mt-5">
-        <div class="card-header">Connexion</div>
+        <div class="card-header fw-bold fs-3">CONNEXION</div>
         <form class="card-body container-fluid" method="post">
             <div class="row mb-3">
                 <?php if(isset($error) && $error): ?>
@@ -18,7 +18,7 @@
                 <?php endif; ?>
                 <div class="col-12">
                     <label for="username" class="form-label">Username</label>
-                    <input type="text" class="form-control" id="username" name="username">
+                    <input type="text" class="form-control" id="username" name="username" autofocus>
                 </div>
                 <div class="col-12">
                     <label for="password" class="form-label">Mot de passe</label>
