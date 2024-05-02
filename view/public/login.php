@@ -25,7 +25,9 @@
                     <input type="password" class="form-control" id="password" name="password">
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Se connecter</button>
+            <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-primary">Se connecter</button>
+            </div>
         </form>
     </div>
 </body>
