@@ -45,7 +45,9 @@
                     <input type="number" step="0.000001" class="form-control" id="longitude" name="longitude" value="<?php if(isset($_POST["longitude"]))echo $_POST["longitude"] ?>" required>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Insérer</button>
+            <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-primary">Insérer</button>
+            </div>
         </form>
     </div>
 </body>
