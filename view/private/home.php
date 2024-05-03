@@ -51,7 +51,7 @@
                             <th data-sortable="true" data-field="adresse">Adresse</th>
                             <th data-sortable="true" data-field="telephone">Telephone</th>
                             <th data-sortable="true" data-field="url">Url</th>
-                            <th>Actions</th>
+                            <th data-field="actions">Actions</th>
                         </tr>
                     </thead>
                     <tbody>

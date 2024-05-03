@@ -36,13 +36,16 @@ class Localisation {
 
 function get_all_localisations(PDO $db):array|string{
     try {
-        $sql = "SELECT * FROM `localisations` ORDER BY `id` DESC";
+        $sql = "SELECT *, CONCAT_WS(' ', `rue`, `codepostal`, 'Bruxelles') AS adresse FROM `localisations` ORDER BY `id` DESC";
         $query = $db->query($sql);
         $locations = $query->fetchAll(PDO::FETCH_ASSOC);
         $query->closeCursor();
         if (count($locations)===0){
             return "pas encore de lieux";
         }
+	for ($i=0;$i<count($locations);$i++){
+		$locations[$i]["actions"] = "<a href='./?edit=$i'><i class='fa fa-pencil text-primary eye-icon'></i></a><a href='./?delete=$i'><i class='fa fa-trash text-primary eye-icon'></i></a>";
+	}
         return $locations;
     }catch (Exception $e){
         return $e->getMessage();
