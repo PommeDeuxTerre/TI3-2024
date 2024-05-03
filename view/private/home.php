@@ -52,7 +52,7 @@
     		data-toggle="table">
     	    <thead>
     		<tr>
-    		    <th data-sortable="true" data-field="nom">Nom</th>
+    		    <th data-sortable="true" data-field="nom2">Nom</th>
     		    <th data-sortable="true" data-field="adresse">Adresse</th>
     		    <th data-sortable="true" data-field="telephone">Telephone</th>
     		    <th data-sortable="true" data-field="url">Url</th>

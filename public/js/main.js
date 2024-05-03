@@ -47,6 +47,7 @@ function handle_res(locations){
         else if (locations.length===1)nb_locations_h3.textContent = "Il y a 1 lieu dans la base de données";
         else nb_locations_h3.textContent = `Il y a ${locations.length} lieux dans la base de données`;
 	}
+	console.log(markers_hashmap);
 }
 
 function add_marker_location(location){

@@ -45,6 +45,7 @@ function get_all_localisations(PDO $db):array|string{
         }
 	for ($i=0;$i<count($locations);$i++){
 		$locations[$i]["actions"] = "<a href='./?edit=$i'><i class='fa fa-pencil text-primary eye-icon'></i></a><a href='./?delete=$i'><i class='fa fa-trash text-primary eye-icon'></i></a>";
+		$locations[$i]["nom2"] = "<p class='name-location' onclick='markers_hashmap[".$locations[$i]["id"]."].openPopup();map.setView(markers_hashmap[".$locations[$i]["id"]."].getLatLng(), 17)'>".$locations[$i]["nom"]."</p>";
 	}
         return $locations;
     }catch (Exception $e){
