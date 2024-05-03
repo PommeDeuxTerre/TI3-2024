@@ -39,13 +39,18 @@
         <!-- table -->
         <div class="container-lg">
             <div class="table-responsive">
-                <table class="table table-striped" data-click-to-select="true" data-toggle="table" data-show-columns="true" data-pagination="true" id="locations-table">
+		<table class="table table-striped"
+			data-url="./?all_datas"
+			data-pagination="true"
+			data-search="true"
+			data-sorting="true"
+			data-toggle="table">
                     <thead>
                         <tr>
-                            <th data-sortable="true">Nom</th>
-                            <th>Adresse</th>
-                            <th>Telephone</th>
-                            <th>Url</th>
+                            <th data-sortable="true" data-field="nom">Nom</th>
+                            <th data-sortable="true" data-field="adresse">Adresse</th>
+                            <th data-sortable="true" data-field="telephone">Telephone</th>
+                            <th data-sortable="true" data-field="url">Url</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -53,52 +58,18 @@
                     </tbody>
                 </table>
             </div>
-            <!-- pagination -->
-            <?php if (isset($nb_page)): ?>
-                <nav>
-                    <ul class="pagination d-flex justify-content-center">
-                        <li class="page-item">
-                            <?php if (isset($_GET["page"]) && $_GET["page"]!=="2"): ?>
-                                <a class="page-link" href="./?page=<?=(int)$_GET["page"]-1?>">Previous</a>
-                            <?php elseif (isset($_GET["page"])): ?>
-                                <a class="page-link" href="./">Previous</a>
-                            <?php else: ?>
-                                <a class="page-link disabled" href="./">Previous</a>
-                            <?php endif; ?>
-                        </li>
-                        <li class="page-item">
-                            <?php if (isset($_GET["page"])): ?>
-                                <a class="page-link" href="./">1</a>
-                            <?php else: ?>
-                                <a class="page-link disabled" href="./">1</a>
-                            <?php endif; ?>
-                        </li>
-                        <?php for($i=2;$i<=$nb_page;$i++): ?>
-                            <li class="page-item">
-                                <?php if (isset($_GET["page"]) && $_GET["page"]==="$i"): ?>
-                                    <a class="page-link disabled" href="?page=<?=$i?>"><?=$i?></a>
-                                <?php else: ?>
-                                    <a class="page-link" href="?page=<?=$i?>"><?=$i?></a>
-                                <?php endif; ?>
-                            </li>
-                        <?php endfor; ?>
-                        <li class="page-item">
-                            <?php if (isset($_GET["page"]) && (int)$_GET["page"]==$nb_page): ?>
-                                <a class="page-link disabled" href="./">Next</a>
-                            <?php elseif (isset($_GET["page"])): ?>
-                                <a class="page-link" href="./?page=<?=(int)$_GET["page"]+1?>">Next</a>
-                            <?php else: ?>
-                                <a class="page-link" href="./?page=2">Next</a>
-                            <?php endif; ?>
-                        </li>
-                    </ul>
-                </nav>
-            <?php endif; ?>
         </div>
     </main>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <!-- leaflet -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- bootstrap table -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.5/dist/bootstrap-table.min.js"></script>
     <!-- local script -->
-    <script src="./js/main.js"></script>
+    <!-- <script src="./js/main.js"></script> -->
+    
 </body>
 </html>

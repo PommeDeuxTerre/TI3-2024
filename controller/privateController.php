@@ -1,5 +1,7 @@
 <?php
 
+$number_locations = get_locations_number($db);
+
 if (isset($_GET["p"])){
     switch ($_GET["p"]){
         case "logout":
@@ -67,9 +69,9 @@ elseif (isset($_GET["create"])){
     require("../view/private/create.php");
 }
 else {
-	$number_locations = get_locations_number($db);
-	if (gettype($number_locations)==="integer"){
-		$nb_page = ceil($number_locations / ELEMENT_BY_PAGE);
-	}
-	require_once("../view/private/home.php");
+    $result = get_locations_number($db);
+    if (gettype($result)==="integer"){
+        $nb_page = ceil($result / ELEMENT_BY_PAGE);
+    }
+    require_once("../view/private/home.php");
 }
