@@ -29,9 +29,9 @@
     <h1>Carte interactive</h1>
     <h2>Liste théatres à Bruxelles</h2>
     <p id="logout-link"><a href="./?p=logout">Se déconnecter</a></p><p id="create-link"><a href="./?create">Insérer un nouvel élement</a></p>
-    <?php if (isset($nb_page) && $nb_page): ?>
-        <h4 id="nb-locations">Il y a <?=$nb_page?> lieux dans la base de données</h4>
-    <?php elseif (isset($nb_page)): ?>
+    <?php if (isset($number_locations) && $number_locations): ?>
+        <h4 id="nb-locations">Il y a <?=$number_locations?> lieux dans la base de données test</h4>
+    <?php elseif (isset($number_locations)): ?>
         <h4 id="nb-locations">Pas encore de lieux</h4>
     <?php endif; ?>
     <main>

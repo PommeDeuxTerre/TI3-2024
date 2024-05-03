@@ -67,9 +67,9 @@ elseif (isset($_GET["create"])){
     require("../view/private/create.php");
 }
 else {
-    $result = get_locations_number($db);
-    if (gettype($result)==="integer"){
-        $nb_page = ceil($result / ELEMENT_BY_PAGE);
-    }
-    require_once("../view/private/home.php");
+	$number_locations = get_locations_number($db);
+	if (gettype($number_locations)==="integer"){
+		$nb_page = ceil($number_locations / ELEMENT_BY_PAGE);
+	}
+	require_once("../view/private/home.php");
 }
