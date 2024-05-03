@@ -13,6 +13,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- bootstrap table -->
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.22.4/dist/bootstrap-table.min.css">
+    <style>
+        #map {
+	    width: 60%;
+	    height: 400px;
+	    margin: auto;
+        }
+    </style>
 </head>
 <body>
     <?php if (isset($_GET["delete_message"])): ?>
@@ -34,32 +41,31 @@
     <?php elseif (isset($number_locations)): ?>
         <h4 id="nb-locations">Pas encore de lieux</h4>
     <?php endif; ?>
-    <main>
-        <div id="map"></div>
-        <!-- table -->
-        <div class="container-lg">
-            <div class="table-responsive">
-		<table class="table table-striped text-center"
-			data-url="./?all_datas"
-			data-pagination="true"
-			data-search="true"
-			data-sorting="true"
-			data-toggle="table">
-                    <thead>
-                        <tr>
-                            <th data-sortable="true" data-field="nom">Nom</th>
-                            <th data-sortable="true" data-field="adresse">Adresse</th>
-                            <th data-sortable="true" data-field="telephone">Telephone</th>
-                            <th data-sortable="true" data-field="url">Url</th>
-                            <th data-field="actions">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
-            </div>
+    <!-- table -->
+    <div class="container-lg">
+        <div class="table-responsive-sm">
+    	<table class="table table-striped text-center text-wrap"
+    		data-url="./?all_datas"
+    		data-pagination="true"
+    		data-search="true"
+    		data-sorting="true"
+    		data-toggle="table">
+    	    <thead>
+    		<tr>
+    		    <th data-sortable="true" data-field="nom">Nom</th>
+    		    <th data-sortable="true" data-field="adresse">Adresse</th>
+    		    <th data-sortable="true" data-field="telephone">Telephone</th>
+    		    <th data-sortable="true" data-field="url">Url</th>
+    		    <th data-field="actions">Actions</th>
+    		</tr>
+    	    </thead>
+    	    <tbody>
+    	    </tbody>
+    	</table>
         </div>
-    </main>
+    </div>
+    <!-- map -->
+    <div id="map"></div>
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <!-- leaflet -->
@@ -69,7 +75,7 @@
     <!-- bootstrap table -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.5/dist/bootstrap-table.min.js"></script>
     <!-- local script -->
-    <!-- <script src="./js/main.js"></script> -->
+    <script src="./js/main.js"></script>
     
 </body>
 </html>
