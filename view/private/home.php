@@ -39,7 +39,7 @@
         <!-- table -->
         <div class="container-lg">
             <div class="table-responsive">
-		<table class="table table-striped"
+		<table class="table table-striped text-center"
 			data-url="./?all_datas"
 			data-pagination="true"
 			data-search="true"
