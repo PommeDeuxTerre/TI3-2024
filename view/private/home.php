@@ -49,7 +49,8 @@
     		data-pagination="true"
     		data-search="true"
     		data-sorting="true"
-    		data-toggle="table">
+    		data-toggle="table"
+    		data-show-columns="true">
     	    <thead>
     		<tr>
     		    <th data-sortable="true" data-field="nom2">Nom</th>
