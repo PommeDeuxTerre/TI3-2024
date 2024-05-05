@@ -1,5 +1,7 @@
 <?php
 
+$number_locations = get_locations_number($db);
+
 if (isset($_GET["p"])){
     switch ($_GET["p"]){
         case "logout":

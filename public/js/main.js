@@ -40,11 +40,14 @@ function handle_res(locations){
             ul_add_location(ul_list, location);
         });
     }
-    //show the number of location
-    const nb_locations_h3 = document.querySelector("#nb-locations");
-    if (locations.length===0)nb_locations_h3.textContent = "pas encore de lieux";
-    else if (locations.length===1)nb_locations_h3.textContent = "Il y a 1 lieu dans la base de données";
-    else nb_locations_h3.textContent = `Il y a ${locations.length} lieux dans la base de données`;
+    //show the number of location (public home)
+    if (ul_list){
+        const nb_locations_h3 = document.querySelector("#nb-locations");
+        if (locations.length===0)nb_locations_h3.textContent = "pas encore de lieux";
+        else if (locations.length===1)nb_locations_h3.textContent = "Il y a 1 lieu dans la base de données";
+        else nb_locations_h3.textContent = `Il y a ${locations.length} lieux dans la base de données`;
+	}
+	console.log(markers_hashmap);
 }
 
 function add_marker_location(location){
