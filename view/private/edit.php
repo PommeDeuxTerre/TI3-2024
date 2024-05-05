@@ -51,6 +51,7 @@
                 </div>
             </div>
             <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-secondary me-2" onclick="location.href='./'">Annuler</button>
                 <button type="submit" class="btn btn-primary">Mettre à jour</button>
             </div>
         </form>
