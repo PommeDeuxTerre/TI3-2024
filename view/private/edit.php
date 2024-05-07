@@ -34,7 +34,7 @@
                     <input type="number" class="form-control" id="postal" name="postal" value="<?php if(isset($location))echo $location["codepostal"] ?>">
                 </div>
                 <div class="col-4 my-1">
-                    <label for="telephone" class="form-label">Telephone</label>
+                    <label for="telephone" class="form-label">Téléphone</label>
                     <input type="tel" class="form-control" id="telephone" name="telephone" value="<?php if(isset($location))echo $location["telephone"] ?>">
                 </div>
                 <div class="col-5 my-1">

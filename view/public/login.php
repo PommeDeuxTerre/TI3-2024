@@ -17,7 +17,7 @@
                 </div>
                 <?php endif; ?>
                 <div class="col-12">
-                    <label for="username" class="form-label">Username</label>
+                    <label for="username" class="form-label">Nom d'utilisateur</label>
                     <input type="text" class="form-control" id="username" name="username" autofocus>
                 </div>
                 <div class="col-12">

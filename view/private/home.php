@@ -34,10 +34,10 @@
     <?php endif; ?>
     <h3></h3>
     <h1>Carte interactive</h1>
-    <h2>Liste théatres à Bruxelles</h2>
-    <p id="logout-link"><a href="./?p=logout">Se déconnecter</a></p><p id="create-link"><a href="./?create">Insérer un nouvel élement</a></p>
+    <h2>Liste des théâtres à Bruxelles</h2>
+    <p id="logout-link"><a href="./?p=logout">Se déconnecter</a></p><p id="create-link"><a href="./?create">Insérer un nouvel élément</a></p>
     <?php if (isset($number_locations) && $number_locations): ?>
-        <h4 id="nb-locations">Il y a <?=$number_locations?> lieux dans la base de données test</h4>
+        <h4 id="nb-locations">Il y a <?=$number_locations?> lieux dans la base de données</h4>
     <?php elseif (isset($number_locations)): ?>
         <h4 id="nb-locations">Pas encore de lieux</h4>
     <?php endif; ?>
@@ -55,7 +55,7 @@
     		<tr>
     		    <th data-sortable="true" data-field="nom2">Nom</th>
     		    <th data-sortable="true" data-field="adresse">Adresse</th>
-    		    <th data-sortable="true" data-field="telephone">Telephone</th>
+    		    <th data-sortable="true" data-field="telephone">Téléphone</th>
     		    <th data-sortable="true" data-field="url">Url</th>
     		    <th data-field="actions">Actions</th>
     		</tr>

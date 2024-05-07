@@ -10,7 +10,7 @@
 </head>
 <body>
     <h1>Carte interactive</h1>
-    <h2>Liste théatres à Bruxelles</h2>
+    <h2>Liste des théâtres à Bruxelles</h2>
     <p id="login-link"><a href="./?p=login">Connexion à l'administration</a></p>
     <h4 id="nb-locations"></h4>
     <main id="public-home">
